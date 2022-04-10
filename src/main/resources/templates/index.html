@@ -3,11 +3,21 @@
 <html>
 <head>
     <title>Music App</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4/css/tachyons.min.css">
 </head>
-<body th:bgcolor="${color}">
-<h2>You music for today:</h2>
+<body>
 
-<h3 th:text="${perfectMusic.title} + ' - ' + ${perfectMusic.author}"></h3>
+<main>
+    <div data-name="component">
+        <article class="helvetica pb5">
+            <header class="vh-100 bg-light-blue dt w-100">
+                <div th:style="'background:url(' + ${perfectMusic.image} +') no-repeat center right;background-size: cover;'" class="dtc v-mid cover ph3 ph4-m ph5-l">
+                    <h1 class="f2 f-subheadline-l measure white lh-title fw9 GFG" th:text="${perfectMusic.author}"></h1>
+                </div>
+            </header>
+        </article>
+    </div>
+</main>
 
 </body>
 </html>
