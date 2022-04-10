@@ -4,7 +4,7 @@
 <head>
     <title>Music App</title>
 </head>
-<body>
+<body th:bgcolor="${color}">
 <h2>You music for today:</h2>
 
 <h3 th:text="${perfectMusic.title} + ' - ' + ${perfectMusic.author}"></h3>
