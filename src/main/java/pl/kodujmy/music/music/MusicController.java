@@ -3,6 +3,7 @@ package pl.kodujmy.music.music;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Random;
 
@@ -16,9 +17,9 @@ public class MusicController {
     }
 
     @RequestMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @RequestParam(defaultValue = "coldplay") String artist) {
 
-        PerfectMusic perfectMusic = perfectMusicService.recommend();
+        PerfectMusic perfectMusic = perfectMusicService.info(artist);
         model.addAttribute("perfectMusic", perfectMusic);
         model.addAttribute("color", getRandomColor());
 
