@@ -2,12 +2,12 @@ package pl.kodujmy.music.music;
 
 public class PerfectMusic {
 
-    private String title;
+    private String image;
     private String author;
 
 
-    public PerfectMusic(String title, String author) {
-        this.title = title;
+    public PerfectMusic(String image, String author) {
+        this.image = image;
         this.author = author;
     }
 
@@ -16,7 +16,7 @@ public class PerfectMusic {
         return author;
     }
 
-    public String getTitle() {
-        return title;
+    public String getImage() {
+        return image;
     }
 }
