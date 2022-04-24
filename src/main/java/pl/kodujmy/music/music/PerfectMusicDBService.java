@@ -19,4 +19,9 @@ public class PerfectMusicDBService implements PerfectMusicService{
         }
         return byId.get().toModel();
     }
+
+    @Override
+    public PerfectMusic info(String artist) {
+        return null;
+    }
 }

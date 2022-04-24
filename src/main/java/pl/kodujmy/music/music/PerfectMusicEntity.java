@@ -34,7 +34,7 @@ public class PerfectMusicEntity {
     }
 
     public PerfectMusic toModel() {
-        return new PerfectMusic(this.title, this.author);
+        return new PerfectMusic(this.author, this.title);
     }
 
 }
