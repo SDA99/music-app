@@ -13,6 +13,6 @@ public class MusicApplication {
 
 	@Bean
 	PerfectMusicService perfectMusicService() {
-		return new PerfectMusicInMemoryService();
+		return new PerfectMusicDBService();
 	}
 }
