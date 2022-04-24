@@ -10,14 +10,16 @@ public class AudioDBArtist {
     private String strArtist;
     private String strStyle;
     private String strArtistBanner;
+    private String strLabel;
 
     public AudioDBArtist() {
     }
 
-    public AudioDBArtist(String strArtist, String strStyle, String strArtistBanner) {
+    public AudioDBArtist(String strArtist, String strStyle, String strArtistBanner, String strLabel) {
         this.strArtist = strArtist;
         this.strStyle = strStyle;
         this.strArtistBanner = strArtistBanner;
+        this.strLabel = strLabel;
     }
 
     public String getStrArtist() {
@@ -51,5 +53,9 @@ public class AudioDBArtist {
 
     public String getStrArtistBanner() {
         return strArtistBanner;
+    }
+
+    public String getStrLabel() {
+        return strLabel;
     }
 }
