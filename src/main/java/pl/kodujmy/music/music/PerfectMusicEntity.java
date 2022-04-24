@@ -11,11 +11,13 @@ public class PerfectMusicEntity {
     private long id;
     private String author;
     private String title;
+    private String imageUrl;
 
-    public PerfectMusicEntity(long id, String author, String title) {
+    public PerfectMusicEntity(long id, String author, String title, String imageUrl) {
         this.id = id;
         this.author = author;
         this.title = title;
+        this.imageUrl = imageUrl;
     }
 
     public PerfectMusicEntity() {
@@ -33,8 +35,11 @@ public class PerfectMusicEntity {
         return title;
     }
 
-    public PerfectMusic toModel() {
-        return new PerfectMusic(this.author, this.title);
+    public String getImageUrl() {
+        return imageUrl;
     }
 
+    public PerfectMusic toModel() {
+        return new PerfectMusic(this.author, this.title, this.imageUrl);
+    }
 }

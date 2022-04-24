@@ -23,7 +23,7 @@ public class PerfectMusicAudioDBPService implements PerfectMusicService{
             System.out.println(a.toString());
         }
 
-        return new PerfectMusic("Viva La Vida", "Coldplay");
+        return new PerfectMusic("Viva La Vida", "Coldplay", "https://www.cgm.pl/wp-content/uploads/2021/10/Coldplay.jpg");
     }
 
     @Override
@@ -35,11 +35,11 @@ public class PerfectMusicAudioDBPService implements PerfectMusicService{
 
         AudioDBArtist[] artists = responseEntity.getBody().getArtists();
         if(artists == null) {
-            return new PerfectMusic("Coudln't find any interesting song for you", "Coudln't find any interesting song for you");
+            return new PerfectMusic("Coudln't find any interesting song for you", "Coudln't find any interesting song for you", "Neither image");
         } else {
             AudioDBArtist first = Arrays.stream(artists).findFirst().get();
 
-            return new PerfectMusic(first.getStrArtistBanner(), first.getStrArtist());
+            return new PerfectMusic(first.getStrArtistBanner(), first.getStrArtist(), first.getStrArtistBanner());
         }
     }
 }
