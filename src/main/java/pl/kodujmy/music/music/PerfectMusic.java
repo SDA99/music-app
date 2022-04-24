@@ -11,6 +11,8 @@ public class PerfectMusic {
         this.author = author;
     }
 
+    public PerfectMusic() {}
+
 
     public String getAuthor() {
         return author;
