@@ -19,7 +19,7 @@ public class MusicController {
     @RequestMapping("/")
     public String index(Model model, @RequestParam(defaultValue = "coldplay") String artist) {
 
-        PerfectMusic perfectMusic = perfectMusicService.info(artist);
+        PerfectMusic perfectMusic = perfectMusicService.recommend();
         model.addAttribute("perfectMusic", perfectMusic);
         model.addAttribute("color", getRandomColor());
 

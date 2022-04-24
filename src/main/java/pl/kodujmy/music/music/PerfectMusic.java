@@ -4,16 +4,21 @@ public class PerfectMusic {
 
     private String image;
     private String author;
+    private String title;
 
 
-    public PerfectMusic(String image, String author) {
-        this.image = image;
+    public PerfectMusic(String author, String title) {
+        this.title = title;
         this.author = author;
     }
 
 
     public String getAuthor() {
         return author;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getImage() {
