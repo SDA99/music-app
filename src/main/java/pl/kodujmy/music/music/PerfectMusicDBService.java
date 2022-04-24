@@ -12,12 +12,9 @@ public class PerfectMusicDBService implements PerfectMusicService{
 
     @Override
     public PerfectMusic recommend() {
-        Optional<PerfectMusicEntity> byId = perfectMusicRepository.findById(1l);
+        PerfectMusicEntity entity = perfectMusicRepository.getRandom();
 
-        if(byId.isEmpty()) {
-            throw new NoSuchElementException("Couldn't find msuic with id 1");
-        }
-        return byId.get().toModel();
+        return entity.toModel();
     }
 
     @Override

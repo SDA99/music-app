@@ -10,7 +10,7 @@ public class PerfectMusic {
     public PerfectMusic(String author, String title, String url) {
         this.title = title;
         this.author = author;
-        this.image = image;
+        this.image = url;
     }
 
 
